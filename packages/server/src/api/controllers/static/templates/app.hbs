@@ -1,0 +1,18 @@
+<html>
+  <script>
+    document.fonts.ready.then(() => {
+      window.parent.postMessage({ type: "docLoaded" });
+    })
+  </script>
+  <head>
+    {{{head}}}
+    <style>{{{css}}}</style>
+  </head>
+
+  <script>
+    window["##BUDIBASE_APP_ID##"] = "{{appId}}"
+    window["##BUDIBASE_APP_EMBEDDED##"] = "{{embedded}}"
+  </script>
+
+  {{{body}}}
+</html>
